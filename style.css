@@ -173,9 +173,9 @@ button{
     flex-direction: column;
     flex-grow: unset;
     flex-wrap: wrap;
-    width: 5px;
-    height: 26px;
-    max-width: 50px;
+    width: 35px;
+    height: 35px;
+    padding:0px;
     margin-top: -41px;
     margin-left: -6px; 
 }
