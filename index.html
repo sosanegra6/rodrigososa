@@ -42,7 +42,13 @@
 <div class="positioner">
 <div class="container">
       <div class="cover-photo">
-        <img src="./assets/face.jpg" class="profile">
+        <div class="add-contact-container">
+			<img src="./assets/face.jpg" class="profile">
+			<a class="add-contact" href="#">
+				<i class="fa fab fa-user-plus"></i>
+				<span></span>
+			</a>
+		</div>
       </div>
       <div class="profile-name">Rodrigo Sosa</div>
       <p class="about">La Quenística</p>      
@@ -74,6 +80,64 @@
 <!-- partial --> 
 </div>
  <script>
+	 function QrWindow(open){
+		  if (open == undefined){
+			open = true;
+		  }
+		  var positioner = document.querySelector('div[class*="floating-positioner"]');
+		  var backdrop   = document.querySelector(".floating-window-backdrop");
+		  var window     = document.querySelector(".floating-window");
+		  if (positioner.clickHandler == undefined){
+			 positioner.clickHandler = true;
+			 $(positioner).on('click', function (e){
+				QrWindow(false);
+			 });
+			 $(backdrop).on('click', function (e){
+				QrWindow(false);
+			 });
+			 $(window).on('click',function (e){
+				e.stopPropagation();
+				e.preventDefault();
+			 });
+			 $(window).find('div a').on('click',function (e){
+				QrWindow(false);
+			 });
+		  }
+		  if (open){		  
+			  $(positioner).addClass("floating-window-visible");
+			  $(backdrop).addClass("floating-visible");
+			  $(window).addClass("floating-window-visible");			  
+			  setTimeout(function (){
+				  $(positioner).css("opacity","1");
+				  $(backdrop).css("opacity","1");
+				  $(window).css("opacity","1");
+			  },50);
+		  }else{
+			  $(positioner).css("opacity","0");
+			  $(backdrop).css("opacity","0");
+			  $(window).css("opacity","0");
+			  setTimeout(function (){
+				  $(positioner).removeClass("floating-window-visible");
+				  $(backdrop).removeClass("floating-visible");
+				  $(window).removeClass("floating-window-visible");
+			  },501);
+		  }
+	  }
+	  var downloadButton = function (e){
+			// si es desktop
+			   QrWindow();
+			// si es movil
+	  };
+	  if ( /(Android|iPhone|iPod|webOS|NetFront|Opera Mini|SEMC-Browser|PlayStation Portable|Nintendo Wii|BlackBerry)/
+		  .test( navigator.userAgent ) )
+	  {
+		  $('a[class="add-contact"]').attr("href","./rodrigososa.vcf");
+		$('a[class="add-contact"]').attr("type","application/vcard");
+		$('a[class="add-contact"]').attr("download","rodrigososa.vcf");		  
+	  }else{
+		  document.querySelector('a[class="add-contact"]').addEventListener('click',downloadButton);		  
+	  }
+	  
 	  window.onresize = function (){
 		  var body = document.querySelector('body');
 		  var container = document.querySelector('.positioner');
@@ -89,6 +153,21 @@
 		  }
 	  };
 	  window.onresize();
+	 setInterval(function (){
+		 // si es movil o tablet		
+		 if ( /(Android|iPhone|iPod|webOS|NetFront|Opera Mini|SEMC-Browser|PlayStation Portable|Nintendo Wii|BlackBerry)/
+		  .test( navigator.userAgent ) )
+		 {
+		    document.querySelector('a[class="add-contact"]').removeEventListener('click',downloadButton);
+			$('a[class="add-contact"]').attr("href","./rodrigososa.vcf");
+			$('a[class="add-contact"]').attr("type","application/vcard");
+			$('a[class="add-contact"]').attr("download","rodrigososa.vcf");
+			QrWindow(false);
+		 }else{
+			document.querySelector('a[class="add-contact"]').addEventListener('click',downloadButton);
+			$('a[class="add-contact"]').attr("href","#");
+		 }
+	  },50);
   </script>
 </body>
 </html>
