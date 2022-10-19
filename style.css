@@ -165,6 +165,7 @@ button{
     background: #ce143a;
     color: #edc30d;
     border: 2px solid #edc30d;
+    border-radius:100%;
     margin-top: -41px;
     margin-left: -6px; 
 }
