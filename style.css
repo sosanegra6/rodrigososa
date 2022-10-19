@@ -135,6 +135,121 @@ button{
 	color:#ce143a;
 }
 
+.add-contact-container {
+	height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding: 7px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding-top: 93px;
+    padding-left: 25px;
+}
+.add-contact {	 
+    border: 2px solid #edc30d;
+    padding: 10px 21px 10px 23px;    
+    border-radius: 100%;
+    font-family: Montserrat, sans-serif;
+    cursor: pointer;
+	position: absolute;
+    /* margin-top: 25px; */
+    background: #ce143a;
+    color: #edc30d;
+    /* margin-left: 0px; */
+    width: 2px;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-decoration: none;
+	margin-top: 15px;
+    margin-left: 30px;
+    margin-right: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: unset;
+    flex-wrap: wrap;
+    width: 5px;
+    height: 26px;
+    max-width: 50px;
+    margin-top: -41px;
+    margin-left: -6px; 
+}
+.add-contact:hover {
+	cursor:pointer;
+	border-color:#edc30d;
+	background:#edc30d;
+	color:#ce143a;
+	
+}
+.add-contact:hover i{
+}
+.add-contact i {
+	margin-left:2px;
+	font-size:25px;	
+}
+.floating-window-backdrop{
+	position:absolute;
+	background:rgba(0,0,0,0.4);
+	width:100vw;
+	height:100vh;	
+	transition:opacity 0.5s;
+	opacity:0;
+	display:none;
+	z-index:100;
+	top:0px;
+	left:0px;
+}
+.floating-positioner{
+	position:absolute;
+	display:none;
+	z-index:150;
+}
+.floating-window{
+	width: 380px;
+    height: 380px;
+    position: absolute;
+    background: green;    
+    align-self: center;
+    justify-self: center;
+	display:none;
+	z-index:150;
+	flex-direction: column;
+	background:#ce143a;
+}
+.floating-visible {
+	display:block;	
+}
+.floating-window-visible {
+	display:flex;	
+}
+.floating-window .buttonscontainer{
+	width:100%;
+	justify-content:flex-end;
+	margin:0px;
+}
+.floating-window .buttonscontainer a {
+	margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.qrcontainer {
+	width:100%;
+	height:100%;
+	display:flex;
+}
+.qrcontainer img{
+	background: yellow;
+    width: 100%;
+    height: auto;
+    margin: 15px;
+    margin-bottom: 0px;
+}
 /*.container i:hover{
   color: #03bfbc;
 }*/
@@ -144,6 +259,13 @@ button{
 	}
 }
 @media (max-width:390px){
+	.add-contact-container {
+	    display: inline-flex;
+		align-self: center;
+		justify-self: center;    
+		margin-left: -30px;
+		margin-top:0px;
+	}
 	.profile {
 	    display: inline-flex;
 		align-self: center;
