@@ -148,34 +148,23 @@ button{
     padding-left: 25px;
 }
 .add-contact {	 
-    border: 2px solid #edc30d;
-    padding: 10px 21px 10px 23px;    
-    border-radius: 100%;
-    font-family: Montserrat, sans-serif;
-    cursor: pointer;
-	position: absolute;
-    /* margin-top: 25px; */
-    background: #ce143a;
-    color: #edc30d;
-    /* margin-left: 0px; */
-    width: 2px;
-    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    overflow: hidden;
+    padding: 0px;
+    max-width: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    min-height: 35px;
+    text-decoration: none;
     align-content: center;
     align-items: center;
     justify-content: center;
     justify-items: center;
-    text-decoration: none;
-	margin-top: 15px;
-    margin-left: 30px;
-    margin-right: 15px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-grow: unset;
-    flex-wrap: wrap;
-    width: 35px;
-    height: 35px;
-    padding:0px;
+    background: #ce143a;
+    color: #edc30d;
+    border: 2px solid #edc30d;
     margin-top: -41px;
     margin-left: -6px; 
 }
@@ -190,7 +179,7 @@ button{
 }
 .add-contact i {
 	margin-left:2px;
-	font-size:25px;	
+	font-size:17px;	
 }
 .floating-window-backdrop{
 	position:absolute;
