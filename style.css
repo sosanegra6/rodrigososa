@@ -41,7 +41,7 @@ main .row {
 	height: 100vh!important;
 }
 main .row[mobile="true"]{
-	/*margin-top:-30px;*/
+	margin-top:-30px;
 }
 .vcard {
 	width:380px;
