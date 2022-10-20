@@ -39,7 +39,9 @@ main .row {
 	justify-content: center;
 	justify-items: center;
 	height: 100vh;
-	margin-top:-25px;
+}
+main .row[mobile="true"]{
+	margin-top:-30px;
 }
 .vcard {
 	width:380px;
