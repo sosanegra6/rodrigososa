@@ -104,6 +104,10 @@ main .row {
 	text-align: right;
 	padding-right:14%;
 }
+.profile-name .name {
+    margin-bottom: 0px;
+    text-transform: capitalize;
+}
 .profile-name .about {
 	margin-top: 0px;
 	line-height: 20px;
