@@ -31,7 +31,7 @@ body {
 	overflow-y:hidden!important;
 }
 main {
-	padding:0px;
+	padding:0px!important;
 }
 main .row {
 	align-content: center;
@@ -39,9 +39,10 @@ main .row {
 	justify-content: center;
 	justify-items: center;
 	height: 100vh!important;
-}
-main .row[mobile="true"]{
-	margin-top:-30px;
+	margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .vcard {
 	width:380px;
@@ -52,6 +53,7 @@ main .row[mobile="true"]{
 	border-radius: 10px;
 	overflow: hidden;
 	user-select: none;
+	position:absolute;
 }
 .vcard .card-header {
 	background: url('./assets/background.png');
