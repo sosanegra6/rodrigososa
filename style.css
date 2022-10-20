@@ -38,7 +38,7 @@ main .row {
 	align-items: center;
 	justify-content: center;
 	justify-items: center;
-	height: 100vh;
+	height: 100vh!important;
 }
 main .row[mobile="true"]{
 	margin-top:-30px;
