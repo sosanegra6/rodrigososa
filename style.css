@@ -329,7 +329,7 @@ button[class="close"] {
 	}
 	main .row {
 		height: 422px;
-		margin-top: 50px;
+		margin-top: 50px!important;
 		padding-bottom: 50px;
 	}
 }
