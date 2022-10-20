@@ -328,9 +328,9 @@ button[class="close"] {
 		overflow-y:auto;
 	}
 	main .row {
-		/*height: 422px;
+		height: 472px;
 		margin-top: 50px!important;
-		padding-bottom: 50px;*/
+		padding-bottom: 50px;
 	}
 }
 @media (max-height:600px){
