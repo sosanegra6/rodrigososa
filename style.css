@@ -333,6 +333,16 @@ button[class="close"] {
 		padding-bottom: 50px;
 	}
 }
+@media (max-height:600px){
+	body {
+		overflow-y:auto;
+	}
+	main .row {
+		height: 422px;
+		margin-top: 50px;
+		padding-bottom: 50px;
+	}
+}
 @media (max-width:420px){
 	main .row .vcard {
 		width: 100%;
