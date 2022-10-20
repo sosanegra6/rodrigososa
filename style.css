@@ -39,6 +39,7 @@ main .row {
 	justify-content: center;
 	justify-items: center;
 	height: 100vh;
+	margin-top:-25px;
 }
 .vcard {
 	width:380px;
