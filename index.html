@@ -131,11 +131,13 @@
 			$('a[class*="add-contact"]').attr("download","rodrigososa.vcf");
 			$('a[class*="add-contact"]').attr("data-toggle","");
 			$('a[class*="add-contact"]').attr("data-target","");
+			$('main .row').attr("mobile","true");
 			$('#qrDialog').modal('hide');			
 		 }else{			
 			$('a[class*="add-contact"]').attr("href","#");
 			$('a[class*="add-contact"]').attr("data-toggle","modal");
 			$('a[class*="add-contact"]').attr("data-target","#qrDialog");
+			$('main .row').attr("mobile","false");
 		 }
 		},50);
 	</script>
