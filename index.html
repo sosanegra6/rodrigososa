@@ -9,7 +9,6 @@
 	<title>Tarjeta de presentación: Rodrigo Sosa</title>
 	<link rel='stylesheet' href='./assets/font-awesome.css'>
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
-	<link rel="stylesheet" href="./style.css">
 	<link rel="icon" type="image/png" href="./favicon.png">
 	<script src="./jquery-3.5.1.min.js"></script>
 	  <meta name="keywords" content="tarjeta de presentación, tarjeta, presentación, Rodrigo Sosa, vcard, la quenística, quenística">
@@ -37,153 +36,108 @@
 	<meta property="og:url" content="https://sosanegra6.github.io/rodrigososa">
 	<meta property="og:title" content="Tarjeta de presentación: Rodrigo Sosa">
 	<meta property="og:description" content="Rodrigo Sosa, músico que toca la quenística">
+	<!-- Bootstrap core CSS -->
+    	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="positioner">
-<div class="container">
-      <div class="cover-photo">
-        <div class="add-contact-container">
-			<img src="./assets/face.jpg" class="profile">
-			<a class="add-contact" href="#">
-				<i class="fa fab fa-user-plus"></i>
-				<span></span>
-			</a>
-		</div>
-      </div>
-      <div class="profile-name">Rodrigo Sosa</div>
-      <p class="about">La Quenística</p>      
-	  <div class="buttonscontainer">
-		  <a class="follow-btn" href="Tel:+5355376504">
-			<i class="fa fab fa-phone"></i>
-			<span>(+53) 5 5376504</span>
-		  </a>
-		  <a class="follow-btn" href="mailto:mr.sosanegra6@gmail.com">
-			<i class="fa fab fa-envelope"></i>
-			<span>mr.sosanegra6@gmail.com</span>
-		  </a>
-	  </div>
-      <div class="socialcontainer">
-	    <a class="socialbutton" href="https://youtube.com/c/RodrigoSosaLaQuen%C3%ADstica" target="_blank">
+<main role="main" class="container">
+		<div class="row">
+			<div class="card vcard">
+			  <div class="card-header">
+				<div class="cover-photo">
+					<img src="./assets/face.jpg">
+				</div>								
+				<a class="btn-secondary add-contact" href="#">
+					<i class="fa fab fa-user-plus"></i>
+					<span></span>
+				</a>				
+			  </div>
+			  <div class="card-body">
+				<div class="profile-name">Rodrigo Sosa <p class="about">La Quenística</p> </div>				
+				<div class="buttonscontainer">
+					  <a class="btn btn-primary btn-vcard-data" href="Tel:+5355376504">
+						<i class="fa fab fa-phone"></i>
+						<div>(+53) 5 5376504</div>
+					  </a>
+					  <a class="btn btn-primary btn-vcard-data" href="mailto:mr.sosanegra6@gmail.com">
+						<i class="fa fab fa-envelope"></i>
+						<div>mr.sosanegra6@gmail.com</div>
+					  </a>
+				 </div>
+			  </div>
+			  <div class="card-footer">
+				  <a class="btn btn-primary socialbutton" href="https://youtube.com/c/RodrigoSosaLaQuen%C3%ADstica" target="_blank">
 			<i class="fa fab fa-youtube"></i>
 		</a>		
-		<a class="socialbutton" href="https://instagram.com/rodrigososalaquenistica?igshid=YmMyMTA2M2Y=" target="_blank">
+		<a class="btn btn-primary socialbutton" href="https://instagram.com/rodrigososalaquenistica?igshid=YmMyMTA2M2Y=" target="_blank">
 			<i class="fa fab fa-instagram"></i>
 		</a>
-		<a class="socialbutton" href="https://www.facebook.com/rodrigososalaquenistica" target="_blank">
+		<a class="btn btn-primary socialbutton" href="https://www.facebook.com/rodrigososalaquenistica" target="_blank">
 			<i class="fa fab fa-facebook-f"></i>
 		</a>
-		<!--<a class="socialbutton" href="https://www.facebook.com/rodrigososalaquenistica">
-			<i class="fa fab fa-twitter"></i>
-		</a>-->
-      </div>
-    </div>
-<!-- partial --> 
-</div>
-		<div class="floating-window-backdrop">
-	</div>
-    <div class="positioner floating-positioner">
-		<div class="floating-window">
-			<div class="qrcontainer">			 
-			  <img src="">
-			</div>
-			<div class="buttonscontainer">			 
-			  <a class="follow-btn" href="mailto:mr.sosanegra6@gmail.com">
-				<i class="fa fab fa-envelope"></i>
-				<span>Aceptar</span>
-			  </a>
+			  </div>
 			</div>
 		</div>
-    </div>
- <script>
-	 function QrWindow(open){
-		  if (open == undefined){
-			open = true;
-		  }
-		  var positioner = document.querySelector('div[class*="floating-positioner"]');
-		  var backdrop   = document.querySelector(".floating-window-backdrop");
-		  var window     = document.querySelector(".floating-window");
-		  if (positioner.clickHandler == undefined){
-			 positioner.clickHandler = true;
-			 $(positioner).on('click', function (e){
-				QrWindow(false);
-			 });
-			 $(backdrop).on('click', function (e){
-				QrWindow(false);
-			 });
-			 $(window).on('click',function (e){
-				e.stopPropagation();
-				e.preventDefault();
-			 });
-			 $(window).find('div a').on('click',function (e){
-				QrWindow(false);
-			 });
-		  }
-		  if (open){		  
-			  $(positioner).addClass("floating-window-visible");
-			  $(backdrop).addClass("floating-visible");
-			  $(window).addClass("floating-window-visible");			  
-			  setTimeout(function (){
-				  $(positioner).css("opacity","1");
-				  $(backdrop).css("opacity","1");
-				  $(window).css("opacity","1");
-			  },50);
-		  }else{
-			  $(positioner).css("opacity","0");
-			  $(backdrop).css("opacity","0");
-			  $(window).css("opacity","0");
-			  setTimeout(function (){
-				  $(positioner).removeClass("floating-window-visible");
-				  $(backdrop).removeClass("floating-visible");
-				  $(window).removeClass("floating-window-visible");
-			  },501);
-		  }
-	  }
-	  var downloadButton = function (e){
-			// si es desktop
-			   QrWindow();
-			// si es movil
-	  };
-	  if ( /(Android|iPhone|iPod|webOS|NetFront|Opera Mini|SEMC-Browser|PlayStation Portable|Nintendo Wii|BlackBerry)/
-		  .test( navigator.userAgent ) )
-	  {
-		  $('a[class="add-contact"]').attr("href","./rodrigososa.vcf");
-		$('a[class="add-contact"]').attr("type","application/vcard");
-		$('a[class="add-contact"]').attr("download","rodrigososa.vcf");		  
-	  }else{
-		  document.querySelector('a[class="add-contact"]').addEventListener('click',downloadButton);		  
-	  }
-	  
-	  window.onresize = function (){
-		  var body = document.querySelector('body');
-		  var container = document.querySelector('.positioner');
-		  var container1 = document.querySelector('.container');
-		  if (window.innerHeight < 500){
-			 body.setAttribute("class","bodyblock");
-			 container.setAttribute("class","positioner bodyblock");
-			 container1.setAttribute("class","container bodyblock");
-		  }else{
-			 body.setAttribute("class","");
-			 container.setAttribute("class","positioner");
-			 container1.setAttribute("class","container");
-		  }
-	  };
-	  window.onresize();
-	 setInterval(function (){
+    </main><!-- /.container -->
+	<div id="qrDialog" class="modal fade fade-up" tabindex="-1" role="dialog" aria-labelledby="qrDialogTitle" aria-hidden="true">
+		<div class="modal-dialog " role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="qrDialogTitle"></h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body qr-container">
+				<img src="./qr.png">				
+			  </div>
+			  <div class="modal-footer">
+				<a class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-close"></i><span>Salir</span></a>
+				<a class="btn btn-primary" download="rodrigososa.vcf" href="./rodrigososa.vcf" type="application/vcard"><i class="fa fa-download"></i><span>Descargar tarjeta</span></a>
+			  </div>
+			</div>
+		</div>
+	</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+	<script>
+		$('#qrDialog').on('show.bs.modal', function(e){
+			 $('body').addClass("no-scroll");
+			 $('#qrDialog').addClass("no-scroll");
+		});
+		$('#qrDialog').on('shown.bs.modal', function(e){
+			$('body').removeClass("no-scroll");
+			$('#qrDialog').removeClass("no-scroll");			
+		});
+		$('#qrDialog').on('hide.bs.modal', function(e){
+			 $('body').addClass("no-scroll");
+			 $('#qrDialog').addClass("no-scroll");
+		});
+		$('#qrDialog').on('hiden.bs.modal', function(e){
+			$('body').removeClass("no-scroll");
+			$('#qrDialog').removeClass("no-scroll");
+		});
+		setInterval(function (){
 		 // si es movil o tablet		
 		 if ( /(Android|iPhone|iPod|webOS|NetFront|Opera Mini|SEMC-Browser|PlayStation Portable|Nintendo Wii|BlackBerry)/
 		  .test( navigator.userAgent ) )
-		 {
-		    document.querySelector('a[class="add-contact"]').removeEventListener('click',downloadButton);
-			$('a[class="add-contact"]').attr("href","./rodrigososa.vcf");
-			$('a[class="add-contact"]').attr("type","application/vcard");
-			$('a[class="add-contact"]').attr("download","rodrigososa.vcf");
-			QrWindow(false);
-		 }else{
-			document.querySelector('a[class="add-contact"]').addEventListener('click',downloadButton);
-			$('a[class="add-contact"]').attr("href","#");
+		 {		    
+			$('a[class*="add-contact"]').attr("href","./rodrigososa.vcf");
+			$('a[class*="add-contact"]').attr("type","application/vcard");
+			$('a[class*="add-contact"]').attr("download","rodrigososa.vcf");
+			$('a[class*="add-contact"]').attr("data-toggle","");
+			$('a[class*="add-contact"]').attr("data-target","");
+			$('#qrDialog').modal('hide');			
+		 }else{			
+			$('a[class*="add-contact"]').attr("href","#");
+			$('a[class*="add-contact"]').attr("data-toggle","modal");
+			$('a[class*="add-contact"]').attr("data-target","#qrDialog");
 		 }
-	  },50);
-  </script>
+		},50);
+	</script>
 </body>
 </html>
