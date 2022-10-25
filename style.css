@@ -60,7 +60,7 @@ main .row {
 	user-select: none;
 }
 .vcard .card-header {
-	background: url('./assets/background.png');
+	background: url('./assets/background.jpg');
 	height: 160px;
 	width: 100%;
 	border-radius: 3px 3px 0 0;
