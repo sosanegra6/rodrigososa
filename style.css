@@ -116,7 +116,7 @@ main .row {
 	padding-right:14%;
 }
 .profile-name .about {
-	margin-top: 0px;
+	margin-top: -15px;
 	line-height: 20px;
 	font-weight: normal;
 	color: #edc30d;
