@@ -388,7 +388,7 @@ button[class="close"] {
 }
 @media (max-width:405px) and (max-height: 500px){
 	.vcard {
-		max-height:472px;
+		max-height:auto;
 	}
 	main .row {
 		height:450px;
