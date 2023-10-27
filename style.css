@@ -238,9 +238,12 @@ main .row {
 	
 }
 .epk{
-	background-image:url(assets/epk.svg);
 	width:24px;
-	height:24px:
+	height:24px;
+}
+.epk img {
+	width:24px;
+	height:24px;
 }
 .add-contact {
 	border-radius:100%;
