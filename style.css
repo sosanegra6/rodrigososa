@@ -237,6 +237,9 @@ main .row {
 	font-size:24px;
 	
 }
+.epk{
+	background-image:url(assets/epk.svg)
+}
 .add-contact {
 	border-radius:100%;
 	position:absolute;
