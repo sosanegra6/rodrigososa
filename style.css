@@ -100,6 +100,7 @@ main .row {
 	display: flex;
 	padding: 0px;
 	padding-bottom: 15px;
+	flex-wrap:wrap;
 }
 .vcard .card-footer .btn {
 	margin-right:10px;
