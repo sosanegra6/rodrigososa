@@ -50,7 +50,7 @@ jobs:
      # - name: Compress files
      #   run: tar -czf my-artifact.tar.gz -C ../temp_dir/ .
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           name: github-pages
