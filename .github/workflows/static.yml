@@ -48,7 +48,7 @@ jobs:
           mkdir ../temp_dir
           cp -r * ../temp_dir/
       - name: Compress files
-        run: tar -czf my-artifact.tar.gz -C ../temp_dir/
+        run: tar -czf my-artifact.tar.gz -C ../temp_dir/ .
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
