@@ -37,24 +37,24 @@ jobs:
           find . -type f -links +1 -exec rm {} \;
       - name: Remove symlinks
         run: find . -type l -delete
-      - name: Verify directory is not empty
-        run: |
-          if [ -z "$(ls -A .)" ]; then
-            echo "Directory is empty"
-            exit 1
-          fi
-      - name: Create temp directory and copy files
-        run: |
-          mkdir ../temp_dir
-          cp -r * ../temp_dir/
-      - name: Compress files
-        run: tar -czf my-artifact.tar.gz -C ../temp_dir/ .
+      #- name: Verify directory is not empty
+       # run: |
+       #   if [ -z "$(ls -A .)" ]; then
+       #     echo "Directory is empty"
+       #     exit 1
+       #   fi
+     # - name: Create temp directory and copy files
+        #run: |
+        #  mkdir ../temp_dir
+        #  cp -r * ../temp_dir/
+     # - name: Compress files
+     #   run: tar -czf my-artifact.tar.gz -C ../temp_dir/ .
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           # Upload entire repository
           name: github-pages
-          path: 'my-artifact.tar.gz'
+          path: 'github-pages.gz'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
