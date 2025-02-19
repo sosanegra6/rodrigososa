@@ -35,11 +35,11 @@ jobs:
       - name: Remove symlinks
         run: find . -type l -delete
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           # Upload entire repository
           name: github-pages
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
