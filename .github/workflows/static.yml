@@ -37,12 +37,14 @@ jobs:
           find . -type f -links +1 -exec rm {} \;
       - name: Remove symlinks
         run: find . -type l -delete
+      - name: Compress files
+        run: tar -czf my-artifact.tar.gz 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           # Upload entire repository
           name: github-pages
-          path: '.'
+          path: 'my-artifact.tar.gz'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
