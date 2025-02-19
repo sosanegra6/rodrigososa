@@ -43,8 +43,12 @@ jobs:
             echo "Directory is empty"
             exit 1
           fi
+      - name: Create temp directory and copy files
+        run: |
+          mkdir temp_dir
+          cp -r . temp_dir/
       - name: Compress files
-        run: tar --exclude='./.git' --exclude='./node_modules' --exclude='./tmp' -czf my-artifact.tar.gz .
+        run: tar -czf my-artifact.tar.gz -C temp_dir
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
